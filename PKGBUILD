@@ -8,6 +8,7 @@ arch=(x86_64 i686)
 url=https://www.aquamaniac.de/rdm/projects/aqbanking
 license=(GPL)
 depends=(gwenhywfar-git ktoblzcheck libofx)
+makedepends=(git)
 options=('!makeflags')
 provides=(aqbanking)
 conflicts=(aqbanking)

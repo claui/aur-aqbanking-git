@@ -6,6 +6,7 @@ pkgbase = aqbanking-git
 	arch = x86_64
 	arch = i686
 	license = GPL
+	makedepends = git
 	depends = gwenhywfar-git
 	depends = ktoblzcheck
 	depends = libofx
@@ -16,4 +17,3 @@ pkgbase = aqbanking-git
 	sha256sums = SKIP
 
 pkgname = aqbanking-git
-
