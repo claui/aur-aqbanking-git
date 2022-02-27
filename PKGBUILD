@@ -1,7 +1,7 @@
 # Maintainer: Sebastian J. Bronner <waschtl@sbronner.com>
 
 pkgname=aqbanking-git
-pkgver=5.99.43beta+10+gfe9dcc2b
+pkgver=6.2.1+330+gdbfbfc32
 pkgrel=1
 pkgdesc="A library for online banking and financial applications"
 arch=(x86_64 i686)
@@ -12,7 +12,7 @@ makedepends=(git)
 options=('!makeflags')
 provides=(aqbanking)
 conflicts=(aqbanking)
-source=(git+https://git.aquamaniac.de/git/aqbanking)
+source=(git+https://git.aquamaniac.de/git/aqbanking#commit=dbfbfc32)
 sha256sums=(SKIP)
 _sourcedir=aqbanking
 
