@@ -1,7 +1,7 @@
 # Maintainer: Sebastian J. Bronner <waschtl@sbronner.com>
 
 pkgname=aqbanking-git
-pkgver=6.2.1+330+gdbfbfc32
+pkgver=6.2.1+349+gcdd9c80e
 pkgrel=1
 pkgdesc="A library for online banking and financial applications"
 arch=(x86_64 i686)
@@ -12,7 +12,7 @@ makedepends=(git)
 options=('!makeflags')
 provides=(aqbanking)
 conflicts=(aqbanking)
-source=(git+https://git.aquamaniac.de/git/aqbanking#commit=dbfbfc32)
+source=(git+https://git.aquamaniac.de/git/aqbanking)
 sha256sums=(SKIP)
 _sourcedir=aqbanking
 
@@ -21,6 +21,9 @@ pkgver() {
 }
 
 prepare() {
+  # Revert known bad commit
+  # (build will complain about `AN_Provider_new` otherwise)
+  git -C $_sourcedir revert --no-edit e9f45f19
   ACLOCAL_FLAGS='-I /usr/share/aclocal' make -C $_sourcedir -fMakefile.cvs
 }
 
